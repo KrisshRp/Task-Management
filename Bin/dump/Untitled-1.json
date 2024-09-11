@@ -1,0 +1,59 @@
+[
+  {
+    "Table": "User Table",
+    "Columns": [
+      "User ID",
+      "Password",
+      "Role",
+      "Avatar"
+    ]
+  },
+  {
+    "Table": "Brand Table",
+    "Columns": [
+      "Brand ID",
+      "Brand Name"
+    ]
+  },
+  {
+    "Table": "Project Table",
+    "Columns": [
+      "Project ID",
+      "Project Name",
+      "Brand Name",
+      "Project Manager",
+      "Creator"
+    ]
+  },
+  {
+    "Table": "Task Table",
+    "Columns": [
+      "Task ID",
+      "Task Details",
+      "Creator",
+      "Project Name",
+      "Brand Name",
+      "Assigned To",
+      "Remark",
+      "Status"
+    ]
+  },
+  {
+    "Table": "Status Table",
+    "Columns": [
+      "Status ID",
+      "Project Name",
+      "Brand Name"
+    ]
+  },
+  {
+    "Table": "Task Log Table",
+    "Columns": [
+      "Log ID",
+      "Task ID",
+      "Task Inital",
+      "Task Update",
+      "Update by"
+    ]
+  }
+]

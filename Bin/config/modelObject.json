@@ -1,0 +1,30 @@
+{
+    "modelName": [
+        "carrier",
+        "agent",
+        "cfs",
+        "cha",
+        "consignee",
+        "customer",
+        "port",
+        "shipment",
+        "shipper",
+        "user",
+        "vessel",
+        "email"
+    ],
+    "models": {
+        "agent":"../../../database/models/agent.model",
+        "carrier":"../../../database/models/carrier.model",
+        "cfs":"../../../database/models/cfs.model",
+        "cha":"../../../database/models/cha.model",
+        "consignee":"../../../database/models/consignee.model",
+        "customer":"../../../database/models/customer.model",
+        "port":"../../../database/models/port.model",
+        "shipment":"../../../database/models/shipment.model",
+        "shipper":"../../../database/models/shipper.model",
+        "user":"../../../database/models/user.model",
+        "vessel":"../../../database/models/vessel.model",
+        "email":"../../../database/models/email.model"
+    }
+}
