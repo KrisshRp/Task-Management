@@ -1,6 +1,5 @@
 const dotenv = require("dotenv");
 const jwt = require("../../Bin/config/jwt");
-const path = require('path')
 
 class Env {
     dotEnvDefault = ".env";
@@ -49,7 +48,7 @@ class Env {
     }
 
     viewenv() {
-        console.log(this.getEnvironment() + " enviroment working on");
+        console.log(`[${process.env.PROJECT_NAME} : ${process.env.PORT}] ${this.getEnvironment()} env working on`);
     }
 }
 

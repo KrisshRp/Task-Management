@@ -33,7 +33,7 @@ server.on("listening", onListening);
  * Normalize a port into a number, string, or false.
  */
 
-console.log(`${process.env.PROJECT_NAME} Listen from the port ${port}`);
+console.log(`[${process.env.PROJECT_NAME} : ${port}] Listen from the port ${port}`);
 function normalizePort(val) {
     var port = parseInt(val, 10);
 

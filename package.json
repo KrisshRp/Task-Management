@@ -9,6 +9,9 @@
     "unmigration": "node ./Database/Migration/unmigration.js",
     "seeders": "node ./Database/config/seeders.js"
   },
+  "_moduleAliases": {
+    "module.js": "./Bin/modules/objectreader.js"
+  },
   "author": "Krissh_rp",
   "license": "ISC",
   "dependencies": {
@@ -19,8 +22,9 @@
     "fs": "^0.0.1-security",
     "http-errors": "^2.0.0",
     "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.1.0",
-    "mongoose": "^7.5.3",
+    "module-alias": "^2.2.3",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.0",
     "nodemailer": "^6.9.5",
     "nodemon": "^3.0.1",
     "task-management": "file:"

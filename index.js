@@ -1,10 +1,14 @@
-require("./Bin/env/env");
-const model = require("./Database/Model/model");
-const schema = require("./Database/Schema/schema");
+const app = require('./app');
+const apiPrefix = process.env.API_PRIFIX;
 
-// console.log(model.Users.schema)
-// console.log(model.Brands.schema)
-// console.log(model.Projects.schema)
-// console.log(model.Tasks.schema)
-// console.log(model.Statuses.schema)
-// console.log(model.TaskLogs.schema)
+app.use(`/${apiPrefix}/brand`, require('./Services/Router/brand.router'));
+app.use(`/${apiPrefix}/category`, require('./Services/Router/category.router'));
+app.use(`/${apiPrefix}/role`, require('./Services/Router/role.router'));
+app.use(`/${apiPrefix}/status`, require('./Services/Router/status.router'));
+app.use(`/${apiPrefix}/user`, require('./Services/Router/user.router'));
+
+// app.get(`${apiPrefix}/*`, (req, res, next) => {
+//     res.status(404).send("Not Found");
+// })
+
+module.exports = app;
