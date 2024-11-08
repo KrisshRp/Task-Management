@@ -6,6 +6,10 @@
                 "type": "String",
                 "required": true
             },
+            "name" :{
+                "type": "String",
+                "required": true
+            },
             "email": {
                 "type": "String",
                 "required": true
@@ -59,8 +63,15 @@
                 "required": true
             },
             "statusList": [{
-                "type": "String",
-                "required": true
+                "substatus" : {
+                    "type": "String",
+                    "required": true
+                },
+                "color" : {
+                    "type": "String",
+                    "required": true,
+                    "default": "#ffffff"
+                }
             }],
             "is_default": {
                 "type": "String",
@@ -85,10 +96,11 @@
                 "type": "String",
                 "required": true
             },
-            "categoryList": [{
+            "color": {
                 "type": "String",
-                "required": true
-            }],
+                "required": true,
+                "default": "#ffffff"
+            },
             "is_delete": {
                 "type": "Boolean",
                 "require": true,
@@ -131,23 +143,28 @@
             },
             "brand": {
                 "type": "ObjectId",
-                "required": true
+                "required": true,
+                "ref": "Brands"
             },
             "projectManager": {
                 "type": "ObjectId",
-                "required": true
+                "required": true,
+                "ref": "Users"
             },
             "projectCreator": {
                 "type": "ObjectId",
-                "required": true
+                "required": true,
+                "ref": "Users"
             },
             "statusList": {
                 "type": "ObjectId",
-                "required": true
+                "required": true,
+                "ref": "Statuses"
             },
             "projectCategory": {
                 "type": "ObjectId",
-                "required": true
+                "required": true,
+                "ref": "Categories"
             },
             "is_delete": {
                 "type": "Boolean",
@@ -181,20 +198,24 @@
                 "required": false
             },
             "creator": {
-                "type": "String",
-                "required": true
+                "type": "ObjectId",
+                "required": false,
+                "ref": "Users"
             },
             "project": {
                 "type": "ObjectId",
-                "required": true
+                "required": true,
+                "ref": "Projects"
             },
             "brand": {
                 "type": "ObjectId",
-                "required": true
+                "required": true,
+                "ref": "Brands"
             },
             "assignedTo": {
                 "type": "ObjectId",
-                "required": false
+                "required": false,
+                "ref": "Users"
             },
             "remark": {
                 "type": "String",
@@ -214,8 +235,9 @@
                 "default":"Assigned"
             },
             "category": {
-                "type": "String",
-                "required": true
+                "type": "ObjectId",
+                "required": true,
+                "ref": "Categories"
             },
             "is_delete": {
                 "type": "Boolean",
@@ -244,8 +266,9 @@
                 "required": true
             },
             "updateBy": {
-                "type": "String",
-                "required": true
+                "type": "ObjectId",
+                "required": false,
+                "ref": "Users"
             }
         }
     }

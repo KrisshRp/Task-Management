@@ -1,9 +1,9 @@
 var express = require('express');
-var path = require('path');
 var cookieParser = require('cookie-parser');
 
 require("./Bin/env/env");
 require('./Database/config/connection');
+require("./Database/config/connect").connect();
 
 var app = express();
 

@@ -13,7 +13,14 @@ module.exports = async (modelObj, data) => {
     var dataObj = { ...data };
     var dataCount = await modelObj.estimatedDocumentCount();
     dataObj[ 'collection_id' ] = idMaker(modelObj.modelName, dataCount);
-    dataObj = dataCleaner(dataObj);
+    try {
+        dataObj = await dataCleaner(dataObj);
+    }catch(err){
+        dataObj = dataObj
+    }
+
+    // console.log(dataObj);
+    
     try {
         await modelObj.create(dataObj);
         return {

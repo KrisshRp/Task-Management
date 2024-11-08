@@ -7,7 +7,7 @@ module.exports = async (modelObj, data) => {
             message: "Data contains invalid key collection_id",
         };
     var dataObj = { ...data };
-    dataObj = dataCleaner(dataObj);
+    // dataObj = dataCleaner(dataObj);
     try {
         await modelObj.updateOne(
             { collection_id: data.collection_id },

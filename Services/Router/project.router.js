@@ -1,5 +1,5 @@
 var router = require('express').Router();
-var controller = require('../Controller/brand.controller');
+var controller = require('../Controller/project.controller');
 
 router.post('/create', controller.create, controller.read);
 router.post('/update', controller.update, controller.read);

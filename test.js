@@ -1,12 +1,7 @@
 const idmaker = require("./Services/modules/idMaker");
 const model = require("./Database/Model/model");
+// require("./Bin/env/env");
+// require("./Database/config/connect").connect();
 
-var data = async () => {
-    await model.Users.find({}).then((data) => {
-        console.log(data);
-    }).catch((err) => {
-        console.log(err);
-    })
-}
-
-data()
+// var dataCount = model.Users.find({});
+console.log(model.Statuses.schema);
