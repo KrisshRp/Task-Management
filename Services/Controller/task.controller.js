@@ -83,7 +83,7 @@ exports.read = async (req, res) => {
 };
 
 exports.delete = async (req, res, next) => {
-    req.deleteStatus = await deleteData(modelObj, req.params.id || null);
+    req.deleteStatus = await deleteData(modelObj, req.body || null);
     next();
 };
 

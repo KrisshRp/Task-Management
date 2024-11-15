@@ -18,6 +18,8 @@ exports.update = async (req, res, next) => {
 
 exports.read = async (req, res) => {
     var responce = await readData(modelObj, req.params.id || null);
+    // console.log(responce);
+    
     res.status(201).json({
         createStatus: req.createStatus || null,
         updateStatus: req.updateStatus || null,
@@ -27,6 +29,6 @@ exports.read = async (req, res) => {
 }
 
 exports.delete = async (req, res, next) => {
-    req.deleteStatus = await deleteData(modelObj, req.params.id || null);
+    req.deleteStatus = await deleteData(modelObj, req.body || null);
     next();
 }

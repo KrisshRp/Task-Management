@@ -5,7 +5,7 @@ var auth = require("../Middleware/auth.middleware");
 router.post('/login', auth.login);
 router.post('/create', controller.create, controller.read);
 router.post('/update', controller.update, controller.read);
-router.get('/delete/:id', controller.delete, controller.read);
+router.post('/delete', controller.delete, controller.read);
 router.get('/read', controller.read);
 router.get('/read/:id', controller.read);
 
