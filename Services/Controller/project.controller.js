@@ -64,6 +64,6 @@ exports.read = async (req, res) => {
 }
 
 exports.delete = async (req, res, next) => {
-    req.updateStatus = await deleteData(modelObj, req.params.id || null);
+    req.deleteStatus = await deleteData(modelObj, req.params.id || null);
     next();
 }
